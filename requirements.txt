@@ -1,5 +1,6 @@
 pandas
 joblib
 flask
+gunicorn
 flask_cors
 Flask-Cors
