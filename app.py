@@ -1,3 +1,4 @@
+#!/usr/bin/env python3.7
 import flask
 from flask_cors import CORS, cross_origin
 import json
