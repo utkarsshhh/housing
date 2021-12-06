@@ -17,7 +17,7 @@ import pandas as pd
 @app.route('/users', methods=['GET'])
 @cross_origin()
 def login():
-    return db
+    return jsonify(db)
 
 @app.route('/users/register',methods=['GET','POST'])
 @cross_origin()
