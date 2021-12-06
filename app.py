@@ -43,4 +43,4 @@ def predict():
     x_pred = pd.DataFrame(pred_vals,(1,))
     response = model.predict(x_pred)
     return jsonify(response.tolist())
-app.run(host = '0.0.0.0')
+app.run(host = '0.0.0.0',debug = True)
