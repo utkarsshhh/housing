@@ -33,6 +33,7 @@ def register():
         lw = open('db.json','w')
         json.dump(db_2,lw)
         lw.close()
+        db2.headers.add("Access-Control-Allow-Origin", "*")
         return jsonify(db_2)
 
 @app.route('/users/predict',methods = ['POST'])
@@ -43,6 +44,7 @@ def predict():
     model = joblib.load('model.pkl')
     x_pred = pd.DataFrame(pred_vals,(1,))
     response = model.predict(x_pred)
+    response.headers.add("Access-Control-Allow-Origin", "*")
     return jsonify(response.tolist())
 if __name__ == '__main__':
     app.run()
